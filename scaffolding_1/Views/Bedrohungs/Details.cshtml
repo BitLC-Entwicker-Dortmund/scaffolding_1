@@ -1,0 +1,42 @@
+﻿@model scaffolding_1.Models.Bedrohung
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bedrohung</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Existent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Existent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Agressor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Agressor.AgressorId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Held)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Held.HeldId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.BedrohungId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
